@@ -1,0 +1,23 @@
+image: docker:stable
+stages:
+  - test
+  - deploy
+
+before_script:
+  - apk update && apk add bash curl
+
+latest:
+  stage: test
+  script:
+    - ./kickstart.sh --ci-build
+  only:
+    - master
+
+stable:
+  stage: deploy
+  script:
+    - ./kickstart.sh --ci-build
+    - echo "call curl deploy script here"
+  when: on_success
+  only:
+    - tags
