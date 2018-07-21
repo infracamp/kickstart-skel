@@ -1,0 +1,6 @@
+version: 1
+from: "infracamp/kickstart-flavor-jekyll"
+
+command:
+  run:
+    - "D:bundle exec jekyll serve -H 0.0.0.0 -s /opt/docs -d /tmp/_build"
