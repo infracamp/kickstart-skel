@@ -3,6 +3,9 @@ stages:
   - test
   - deploy
 
+services:
+  - docker:dind
+
 before_script:
   - apk update && apk add bash curl
 
