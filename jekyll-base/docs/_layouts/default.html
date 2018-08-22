@@ -1,58 +1,8 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>infracamp.org - {{ page.title }}</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-
-    <link rel="stylesheet" href="/assets/normalize.css">
-    <link rel="stylesheet" href="/assets/github.css">
-    <link rel="icon" href="/assets/infracamp.png">
-    <!--link rel="stylesheet" href="/assets/syntax.css"-->
-</head>
+{% include head.html %}
 <body>
-
-    <header class="navbar shadow-sm flex-column flex-md-row navbar-dark bg-dark box-shadow sticky-top">
-         <div class="navbar-expand-sm container">
-            <a class="navbar-brand mr-0 mr-md-2" href="http://infracamp.org">
-                <img src="/assets/infracamp.png" width="30" height="30"/>
-                infracamp.org</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/kickstart.html">Getting started</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="dropdownMenuId1" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuId1">
-                            <a class="dropdown-item" href="/projects/kickstart/README.html">Kickstart</a>
-
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/containers.html">Containers</a>
-                    </li>
-                </ul>
-                <a class="navbar-brand fa-2x align-middle" href="https://github.com/infracamp">
-                    <i class="fab fa-github"></i>
-                </a>
-
-                <a class="navbar-brand fa-2x align-middle" href="https://github.com/infracamp/infracamp/issues">
-                    <i class="fas fa-comments"></i>
-                </a>
-            </div>
-
-         </div>
-
-    </header>
-
+    {% include header.html %}
     <div class="container container-fluid">
         <div class="row flex-xl-nowrap">
             <div class="col-12 col-md-12 col-lg-9">
@@ -64,32 +14,7 @@
             </div>
         </div>
     </div>
-
-
-    <footer class="text-muted border-top">
-        <div class="container">
-            <p class="float-right">
-                <a href="#">Back to top</a>
-            </p>
-            <p>Created with <i class='fas fa-car'></i> in Aachen - <a href="/about.html">About infracamp</a></p>
-        </div>
-    </footer>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-
-    <script language="javascript" crossorigin="anonymous" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    <script language="javascript" crossorigin="anonymous" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/php.min.js"></script>
-    <script language="javascript">hljs.initHighlightingOnLoad();</script>
-    <script language="javascript">
-        $("h1,h2").each(function (elem) {
-            var key = new String($(this).text());
-            key = key.replace(/ /g, "");
-            $(this).prev().append("<a id='" + key +"'></a>");
-            $("#scroll-spy").append('<a class="list-group-item list-group-item-action" href="#' + key + '">' + $(this).text() + "</a>");
-        })
-        $('body').scrollspy({ target: '#scroll-spy' })
-    </script>
+    {% include footer.html %}
+    {% include script.html %}
 </body>
 </html>
