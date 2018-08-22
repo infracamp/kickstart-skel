@@ -5,6 +5,6 @@ title: developer camp
 
 Designs:
 
-- [Anchored](anchored.html)
+- [Scrollspy](scrollspy.html)
 
 {% include_relative README.md %}

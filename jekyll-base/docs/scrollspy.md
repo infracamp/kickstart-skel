@@ -1,5 +1,5 @@
 ---
-layout: anchored
+layout: scrollspy
 title: developer camp
 ---
 
