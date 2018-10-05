@@ -1,18 +1,46 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: matthes
- * Date: 27.06.18
- * Time: 17:04
- */
 
 namespace App;
+use Phore\MicroApp\App;
+use Phore\MicroApp\Handler\JsonExceptionHandler;
+use Phore\MicroApp\Handler\JsonResponseHandler;
+use Phore\MicroApp\Helper\CORSHelper;
+use Phore\MicroApp\Type\QueryParams;
+use Phore\MicroApp\Type\Request;
+use Phore\MicroApp\Type\RouteParams;
+
 
 require __DIR__ . "/../vendor/autoload.php";
 
 $app = new App();
 $app->activateExceptionErrorHandlers();
 $app->setOnExceptionHandler(new JsonExceptionHandler());
+$app->setResponseHandler(new JsonResponseHandler());
+
+$app->assets()->addAssetSearchPath(__DIR__ . "/asset/");
 
 
+/**
+ ** Configure Access Control Lists
+ **/
+$app->acl->addRule(\aclRule()->route("/*")->ALLOW());
+
+
+/**
+ ** Configure Dependency Injection
+ **/
+$app->add("someParameterName", function () {
+    return "Value";
+});
+
+/**
+ ** Define Routes
+ **/
+$app->router->get("/", function (QueryParams $queryParams, Request $request) {
+    return ["Hello World!"];
+});
+
+/**
+ ** Run the application
+ **/
 $app->serve();
