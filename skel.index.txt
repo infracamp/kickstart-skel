@@ -1,0 +1,11 @@
+app-base
+    Basic application including .gitignore .dockerignore .gitattributes etc.
+
+gitlab-ci-build
+    Install dockerfile and giblab-ci basic configuration
+
+jekyll-base
+    Basic HTML Templates for static website development
+
+php-app-base
+    Basic phore/micro-app project
