@@ -4,7 +4,7 @@ Skeleton projects for various frameworks and flavors.
 Install by using
 
 ```
-./kickstart.sh --skel <skel-name>
+./kickstart.sh skel install <skel-name>
 ```
 
 | skel-name             | Description                               |

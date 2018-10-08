@@ -36,7 +36,7 @@ $app->add("someParameterName", function () {
 /**
  ** Define Routes
  **/
-$app->router->get("/", function (QueryParams $queryParams, Request $request) {
+$app->router->get("/", function (RouteParams $routeParams, Request $request) {
     return ["Hello World!"];
 });
 
