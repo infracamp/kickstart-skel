@@ -17,7 +17,7 @@ $app->activateExceptionErrorHandlers();
 $app->setOnExceptionHandler(new JsonExceptionHandler());
 $app->setResponseHandler(new JsonResponseHandler());
 
-$app->assets()->addAssetSearchPath(__DIR__ . "/asset/");
+$app->assets()->addAssetSearchPath(__DIR__ . "/assets/");
 
 
 /**
