@@ -7,13 +7,12 @@ stages:
 services:
   - docker:dind
 
-variables:
-  GIT_SUBMODULE_STRATEGY: recursive
+## Activate if git submodules are present
+# variables:
+#   GIT_SUBMODULE_STRATEGY: recursive
 
 before_script:
   - apk update && apk add bash curl
-
-
 
 latest:
   stage: test
@@ -29,4 +28,4 @@ stable:
     - echo "call curl deploy script here"
   when: on_success
   only:
-    - tags
+    - master

@@ -1,5 +1,9 @@
-FROM infracamp/kickstart-flavor-gaia
+# This is a template Dockerfile from kickstart-skel
+#
+# Edit FROM-Line to actual base image:
+FROM infracamp/kickstart-flavor-<flavor-name>
 
+# Provide a container name:
 ENV DEV_CONTAINER_NAME="some_name"
 
 ADD / /opt
