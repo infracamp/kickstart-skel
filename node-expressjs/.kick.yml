@@ -1,0 +1,13 @@
+version: 1
+from: "infracamp/kickstart-flavor-erebos:testing"
+
+command:
+  build:
+    - npm install
+
+  dev:
+    - D:nodemon server.js
+
+  run:
+    - node server.js
+

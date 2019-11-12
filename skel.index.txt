@@ -9,3 +9,6 @@ jekyll-base
 
 php-app-base
     Basic phore/micro-app project
+
+node-expressjs
+    Basic expressjs hello world service with npm and nodemon
