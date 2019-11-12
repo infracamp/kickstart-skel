@@ -5,6 +5,9 @@ command:
   build:
     - npm install
 
+  test:
+    - "echo 'no tests'"
+
   dev:
     - D:nodemon server.js
 
