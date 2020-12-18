@@ -4,6 +4,6 @@ FROM nfra/kickstart-flavor-php:7.4
 
 ADD / /opt
 RUN ["bash", "-c",  "chown -R user /opt"]
-RUN ["/kickstart/flavorkit/scripts/start.sh", "build"]
+RUN ["/kickstart/run/entrypoint.sh", "build"]
 
-ENTRYPOINT ["/kickstart/flavorkit/scripts/start.sh", "standalone"]
+ENTRYPOINT ["/kickstart/run/entrypoint.sh", "standalone"]
