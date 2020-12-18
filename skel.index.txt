@@ -12,3 +12,6 @@ php-app-base
 
 node-expressjs
     Basic expressjs hello world service with npm and nodemon
+
+nfra/kickstart-flavor-php:7.4
+    Basic container apache2-mod-php7.4

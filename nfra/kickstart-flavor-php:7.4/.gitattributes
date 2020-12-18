@@ -1,0 +1,7 @@
+# Template file from [kickstart-skel](.kicker/KICKSTART_README.md)
+* text eol=lf
+
+*.jpg binary
+*.png binary
+*.ico binary
+*.pdf binary
