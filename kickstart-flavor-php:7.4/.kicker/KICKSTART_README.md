@@ -44,7 +44,7 @@ crawl for an equal file the users home directory `~/.kickstartconfig`
 which can be used to define properties for all your projects like
 special mount points, etc.
 
-### `.kicker/tpl/` - Template  
+### `.kicker/conf/` - Template  
 
 These files are copied to the dedicated location on the image during
 initialization. So here you can configure the container.
